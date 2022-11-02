@@ -19,8 +19,8 @@ from django.urls import path, include
 from women.views import *
 from rest_framework import routers
 
-router = routers.SimpleRouter()
-router.register(r'women', WomenViewSets)
+router = routers.DefaultRouter()
+router.register(r'women', WomenViewSets, basename='women')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
